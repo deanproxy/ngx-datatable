@@ -25,6 +25,9 @@ pagerNext: 'datatable-icon-skip'
 ## `externalPaging`
 Should the table use external paging vs client-side. Default value: `false`
 
+## `scrollPaging`
+Should the table sync scrolling with paging when using `scrollbarV`. Default value: `true`
+
 ## `externalSorting`
 Should the table use external sorting vs client-side. Default value: `false`
 

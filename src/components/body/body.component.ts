@@ -95,6 +95,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
   @Input() scrollbarH: boolean;
   @Input() loadingIndicator: boolean;
   @Input() externalPaging: boolean;
+  @Input() scrollPaging: boolean = true;
   @Input() rowHeight: number;
   @Input() offsetX: number;
   @Input() emptyMessage: string;
@@ -339,7 +340,7 @@ export class DataTableBodyComponent implements OnInit, OnDestroy {
       offset = Math.ceil(offset);
     }
 
-    if (direction !== undefined && !isNaN(offset)) {
+    if (this.scrollPaging && direction !== undefined && !isNaN(offset)) {
       this.page.emit({ offset });
     }
   }

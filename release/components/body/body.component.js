@@ -266,7 +266,7 @@ var DataTableBodyComponent = /** @class */ (function () {
         else if (direction === 'down') {
             offset = Math.ceil(offset);
         }
-        if (direction !== undefined && !isNaN(offset)) {
+        if (this.scrollPaging && direction !== undefined && !isNaN(offset)) {
             this.page.emit({ offset: offset });
         }
     };

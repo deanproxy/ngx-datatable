@@ -83,6 +83,10 @@ export declare class DatatableComponent implements OnInit, DoCheck, AfterViewIni
      */
     externalPaging: boolean;
     /**
+     * Whether or not to sync the pagination with scrolling.
+     */
+    scrollPaging: boolean;
+    /**
      * If the table should use external sorting or
      * the built-in basic sorting.
      */

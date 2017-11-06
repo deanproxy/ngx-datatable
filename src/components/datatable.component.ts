@@ -55,6 +55,7 @@ import { MouseEvent } from '../events';
         [scrollbarH]="scrollbarH"
         [loadingIndicator]="loadingIndicator"
         [externalPaging]="externalPaging"
+        [scrollPaging]="scrollPaging"
         [rowHeight]="rowHeight"
         [rowCount]="rowCount"
         [offset]="offset"
@@ -237,6 +238,11 @@ export class DatatableComponent implements OnInit, DoCheck, AfterViewInit {
    * otherwise its assumed that all data is preloaded.
    */
   @Input() externalPaging: boolean = false;
+
+  /**
+   * Whether or not to sync the pagination with scrolling.
+   */
+  @Input() scrollPaging: boolean = true;
 
   /**
    * If the table should use external sorting or
